@@ -1,20 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Session 5
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- printing the birthday variable with pipes to set the styling of the result -->
+  <p>{{birthday | date:"MMMM/dd/yyyy, hh:mm:ss"}}</p>
+  
+  <!-- printing the currency variable with pipes to set the styling of the result -->
+  <p>{{currency | currency:'USD'}}</p>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- printing the value of the currency variable * 2 -->
+  <p>{{currency | doubleValue}}</p>
+
+  <!-- printing the value of the user variable in json format -->
+  <p>{{user | json}}</p>
+
+  <!-- printing the value of the firstname from the user variable -->
+  <p>{{user | userExtend:"firstname"}}</p>
+
+  <!-- printing the value of the lastname from the user variable -->
+  <p>{{user | userExtend:"lastname"}}</p>
+
+  <!-- printing the value of the age from the user variable -->
+  <p>{{user | userExtend:"age"}}</p>
 </ion-content>
